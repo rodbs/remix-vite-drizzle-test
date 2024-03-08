@@ -2,7 +2,7 @@ import { ExitIcon, LaptopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Form, Link } from "@remix-run/react";
 import * as React from "react";
 import { useHydrated } from "remix-utils/use-hydrated";
-
+import { hello } from "#app/utils/misc";
 import {
 	getTheme,
 	setTheme as setSystemTheme,
@@ -27,7 +27,7 @@ export function Header({
 		rerender({});
 	}, []);
 	const theme = getTheme();
-
+	hello();
 	return (
 		<>
 			<Form id="logout-form" method="POST" action="/logout" />

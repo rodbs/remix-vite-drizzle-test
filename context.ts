@@ -4,13 +4,15 @@ import { drizzle } from "drizzle-orm/d1";
 import schema from "./app/db.server/schema";
 
 export interface Env {
-	DB: D1Database;
-	SESSION_SECRET: string;
+  DB: D1Database;
+  SESSION_SECRET: string;
 }
+import { hello } from "@/utils/misc";
 
 export function getLoadContext(env: Env): AppLoadContext {
-	return {
-		DB: drizzle(env.DB, { schema }),
-		SESSION_SECRET: env.SESSION_SECRET,
-	};
+  hello();
+  return {
+    DB: drizzle(env.DB, { schema }),
+    SESSION_SECRET: env.SESSION_SECRET,
+  };
 }
