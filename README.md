@@ -66,3 +66,4 @@ In your project:
 - Update your wrangler.toml `database_id` to the ID of the linked D1 database you used above
 - Apply database migrations: `npx wrangler d1 migrations apply DB`
 - Commit and push to deploy your application
+# remix-vite-drizzle-test
